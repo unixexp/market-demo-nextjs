@@ -3,6 +3,7 @@ import styles from "./header.module.scss";
 import Logo from "../logo/logo";
 import Search from "../search/search";
 import Phones from "../phones/phones";
+import Tools from "../tools/tools";
 
 export default function Header() {
 
@@ -25,6 +26,10 @@ export default function Header() {
                     <div className={styles["header__right-block"]}>
                         <div class={styles["header__phones"]}>
                             <Phones phones={phones} />
+                        </div>
+
+                        <div class={styles["header__tools"]}>
+                            <Tools />
                         </div>
                     </div>
                 </div>
