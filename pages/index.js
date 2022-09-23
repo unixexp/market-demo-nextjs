@@ -1,17 +1,16 @@
 import Head from "next/head";
 
 import Layout from "../components/layout/layout";
-import Logo from "../components/logo/logo";
+import Header from "../components/header/header";
 
 export default function IndexPage() {
 
     return (
         <Layout>
             <Head>
-                <title>Index page</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>Music market</title>
             </Head>
-            <Logo />
+            <Header />
         </Layout>
     );
 

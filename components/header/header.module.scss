@@ -1,0 +1,41 @@
+@import "../../styles/vars.scss";
+
+.header {
+
+    background-color: $panelColor;
+
+    &__content {
+        display: flex;
+        align-items: self-end;
+        padding: 15px 0;
+    }
+
+    &__left-block {
+        display: flex;
+        align-items: self-end;
+        width: 100%;
+    }
+
+    &__right-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: self-end;
+    }
+
+    &__search {
+        padding-left: 15px;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__phones {
+        min-width: 200px;
+        padding-left: 15px;
+    }
+
+    &__tools {
+        padding-left: 15px;
+    }
+
+}
