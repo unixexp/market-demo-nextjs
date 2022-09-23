@@ -1,6 +1,12 @@
 import styles from "./phones.module.scss";
 
-export default function Phones() {
+import PhonesItem from "../phones-item/phones-item";
+
+export default function Phones({ phones }) {
+
+    const elements = phones.map((phone) => {
+        return <PhonesItem phone={phone} />
+    });
 
     return (
         <div className={styles["phones"]}>
@@ -10,21 +16,13 @@ export default function Phones() {
                 </svg>
             </div>
 
-            <a href="tel:+380121231313"
-                className={
-                    [styles["phones__phone"], styles["phones__phone--current"]].join(" ")
-                }>(012) 123-13-13</a>
+            <a href={`tel:${phones[0].value}`}
+                className={[styles["phones__phone"], styles["phones__phone--current"]].join(" ")}>
+                {phones[0].value}
+            </a>
 
             <ul className={styles["phones__list"]}>
-                <li className={styles["phones__list-item"]}>
-                    <a href="tel:+380121231313" className={styles["phones__phone"]}>(012) 123-13-13</a>
-                </li>
-                <li className={styles["phones__list-item"]}>
-                    <a href="tel:+380121231313" className={styles["phones__phone"]}>(012) 123-13-13</a>
-                </li>
-                <li className={styles["phones__list-item"]}>
-                    <a href="tel:+380121231313" className={styles["phones__phone"]}>(012) 123-13-13</a>
-                </li>
+                { elements }
             </ul>
 
             <svg className={styles["phones__arrow"]} viewBox="0 0 32 32">

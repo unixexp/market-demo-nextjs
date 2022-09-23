@@ -51,14 +51,6 @@
         color: $secondaryColor;
     }
 
-    &__list-item:not(:last-child) {
-        padding-bottom: 10px;
-    }
-
-    &__list-item:first-child {
-        display: none;
-    }
-
     &:hover &__list {
         display: block;
     }
