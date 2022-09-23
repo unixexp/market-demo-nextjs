@@ -41,3 +41,9 @@
         fill: $iconColor;
     }
 }
+
+@media (max-width: 996px) {
+	.search {
+		width: 100%;
+	}
+}

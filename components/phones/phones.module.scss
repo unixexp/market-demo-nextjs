@@ -1,7 +1,6 @@
 @import "../../styles/vars.scss";
 
 .phones {
-
     cursor: pointer;
     position: relative;
     display: flex;
@@ -63,5 +62,44 @@
     &__phone-wrapper {
         position: relative;
     }
+}
 
+@media (max-width: 1200px) {
+	.phones {
+		margin-bottom: 0;
+
+		&__arrow {
+        	display: none;
+    	}
+
+    	&__phone--current {
+        	display: none;
+    	}
+
+    	&__img-wrapper {
+    		height: 42px;
+    	}
+
+    	&__img {
+    		width: 42px;
+    	}
+
+    	&__list {
+    		min-width: 142px;
+    		left: 0;
+    	}
+	}
+}
+
+@media (max-width: 688px) or (max-height: 540px) {
+	.phones {
+		&__img-wrapper {
+			padding-right: 0;
+			height: 24px;
+		}
+
+		&__img {
+			height: 24px;
+		}
+	}
 }

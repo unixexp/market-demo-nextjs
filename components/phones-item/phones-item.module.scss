@@ -1,7 +1,6 @@
 @import "../../styles/vars.scss";
 
 .phones {
-
     &__list-item:not(:last-child) {
         padding-bottom: 10px;
     }
@@ -19,5 +18,12 @@
     &__phone:hover {
         color: $secondaryColor;
     }
+}
 
+@media (max-width: 1200px) {
+	.phones {
+    	&__list-item:first-child {
+        	display: block;
+    	}
+	}
 }
